@@ -1,26 +1,102 @@
 [
   {
     "Id": 1,
-    "name": "Design Engineering",
-    "description": "Collaborative design and engineering support from concept through production readiness.",
-    "features": ["3D CAD Design", "FEA Analysis", "DFM Optimization", "Technical Documentation"]
+    "name": "CNC Machining",
+    "description": "Precision computer-controlled machining for complex geometries and tight tolerances using advanced multi-axis equipment.",
+    "processDescription": "Our CNC machining operations utilize state-of-the-art computer numerical control systems to produce high-precision components from various materials. We specialize in both prototype and production runs with exceptional accuracy and repeatability.",
+    "processSteps": [
+      "CAD/CAM programming and toolpath optimization",
+      "Material selection and preparation",
+      "Multi-axis machining operations",
+      "In-process quality inspection",
+      "Final dimensional verification and surface finishing"
+    ],
+    "equipment": [
+      "5-axis CNC machining centers up to 60\" x 40\" x 30\"",
+      "High-speed spindles up to 20,000 RPM",
+      "Live tooling lathes with Y-axis capability",
+      "Swiss-type turning centers for complex parts",
+      "Automated workholding and part handling systems"
+    ],
+    "materials": ["Aluminum alloys", "Stainless steel", "Carbon steel", "Titanium", "Brass", "Copper", "Engineering plastics", "Exotic alloys"],
+    "toleranceRange": "±0.0005\" (±0.013mm) standard, ±0.0002\" (±0.005mm) achievable",
+    "turnaroundTime": "3-10 business days for prototypes, 2-4 weeks for production runs",
+    "capacity": "Single parts to 10,000+ piece production runs",
+    "qualityStandards": ["ISO 9001:2015", "AS9100D", "ITAR Registered", "First Article Inspection"]
   },
   {
     "Id": 2,
-    "name": "Material Selection",
-    "description": "Expert guidance on material selection for optimal performance and cost-effectiveness.",
-    "features": ["Material Testing", "Cost Analysis", "Performance Validation", "Supply Chain Management"]
+    "name": "Welding",
+    "description": "Expert welding services including TIG, MIG, and specialized processes for structural, automotive, and aerospace applications.",
+    "processDescription": "Our certified welding professionals deliver superior joint integrity using advanced welding techniques. We handle everything from delicate thin-wall assemblies to heavy structural components with full traceability and documentation.",
+    "processSteps": [
+      "Joint design and fit-up preparation",
+      "Material preparation and cleaning",
+      "Welding procedure qualification and setup",
+      "Multi-pass welding with inter-pass inspection",
+      "Post-weld heat treatment and NDT testing"
+    ],
+    "equipment": [
+      "TIG welding stations with AC/DC capability up to 400A",
+      "MIG/MAG welding systems with pulse and synergic control",
+      "Submerged arc welding for heavy sections",
+      "Resistance spot and seam welding equipment",
+      "Automated welding cells with robotic systems"
+    ],
+    "materials": ["Carbon steel", "Stainless steel", "Aluminum alloys", "Inconel", "Hastelloy", "Duplex stainless", "Titanium", "Magnesium"],
+    "toleranceRange": "Weld bead profiles ±1mm, Angular distortion <2°",
+    "turnaroundTime": "2-7 business days for fabrication, 1-3 weeks for complex assemblies",
+    "capacity": "Components from 1oz to 50,000 lbs, assemblies up to 30ft length",
+    "qualityStandards": ["AWS D1.1", "ASME IX", "API 1104", "ISO 3834", "Certified Welding Inspectors"]
   },
   {
     "Id": 3,
-    "name": "Process Development",
-    "description": "Custom manufacturing process development and optimization for your specific requirements.",
-    "features": ["Process Design", "Tooling Development", "Quality Planning", "Production Scale-up"]
+    "name": "Assembly",
+    "description": "Complete mechanical and electro-mechanical assembly services with comprehensive testing and validation procedures.",
+    "processDescription": "Our assembly operations combine precision mechanical work with advanced testing capabilities. We provide full assembly services from simple sub-assemblies to complex integrated systems with full functional verification.",
+    "processSteps": [
+      "Component inspection and preparation",
+      "Sequential assembly per work instructions",
+      "Torque and fit verification at each stage",
+      "Functional testing and calibration",
+      "Final inspection and packaging"
+    ],
+    "equipment": [
+      "Precision torque tools (0.1-1000 in-lb range)",
+      "Clean room assembly environment (Class 10,000)",
+      "Automated insertion and placement systems",
+      "Functional test stations with data logging",
+      "Leak testing equipment (helium and bubble)"
+    ],
+    "materials": ["Mechanical fasteners", "Adhesives and sealants", "O-rings and gaskets", "Electronic components", "Hydraulic/pneumatic fittings"],
+    "toleranceRange": "Assembly dimensions ±0.002\", Torque values ±5%",
+    "turnaroundTime": "1-5 business days for simple assemblies, 1-4 weeks for complex systems",
+    "capacity": "Single prototypes to 1,000+ units monthly",
+    "qualityStandards": ["IPC-A-610", "J-STD-001", "ISO 13485", "21 CFR Part 820", "Full traceability documentation"]
   },
   {
     "Id": 4,
-    "name": "Project Management",
-    "description": "End-to-end project management ensuring on-time delivery and quality standards.",
-    "features": ["Timeline Management", "Quality Assurance", "Progress Reporting", "Risk Mitigation"]
+    "name": "Quality Control",
+    "description": "Comprehensive quality assurance and inspection services using advanced metrology equipment and statistical process control.",
+    "processDescription": "Our quality control department employs advanced measurement technologies and statistical methods to ensure product conformance. We provide complete dimensional inspection, material verification, and performance testing services.",
+    "processSteps": [
+      "Incoming material inspection and certification",
+      "In-process dimensional verification",
+      "Statistical process control monitoring",
+      "Final inspection and documentation",
+      "Certificate of compliance generation"
+    ],
+    "equipment": [
+      "Coordinate measuring machines (CMM) up to 48\"x24\"x18\"",
+      "Optical comparators and vision systems",
+      "Surface roughness and profile measurement",
+      "Hardness testing (Rockwell, Brinell, Vickers)",
+      "Material analysis (XRF, optical emission spectroscopy)"
+    ],
+    "materials": ["All metallic materials", "Engineering plastics", "Composites", "Ceramics", "Coated materials"],
+    "toleranceRange": "Measurement uncertainty ±0.0001\" (±0.0025mm)",
+    "turnaroundTime": "Same day for standard inspections, 2-3 days for complex measurements",
+    "capacity": "Parts from micro-components to 4ft x 2ft x 1.5ft envelope",
+    "qualityStandards": ["ISO/IEC 17025", "NIST traceable", "AS9102 First Articles", "PPAP Level 4", "MSA compliant"]
   }
 ]
