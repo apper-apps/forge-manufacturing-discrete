@@ -114,7 +114,6 @@ const AboutSection = () => {
     { name: "Medtronic", logo: "Heart" },
     { name: "Tesla", logo: "Zap" },
     { name: "Lockheed Martin", logo: "Rocket" }
-  ];
 ];
 
   // Company values
@@ -141,7 +140,8 @@ const AboutSection = () => {
     { key: "years", target: 25, suffix: "+", label: "Years in Business", icon: "Calendar" },
     { key: "projects", target: 500, suffix: "+", label: "Projects Completed", icon: "CheckCircle" },
     { key: "clients", target: 200, suffix: "+", label: "Satisfied Clients", icon: "Users" },
-    { key: "satisfaction", target: 99.9, suffix: "%", label: "Client Satisfaction", icon: "ThumbsUp" }
+{ key: "satisfaction", target: 99.9, suffix: "%", label: "Client Satisfaction", icon: "ThumbsUp" }
+  ];
 
   // Intersection Observer for scroll-triggered animations
   useEffect(() => {
