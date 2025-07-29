@@ -1,0 +1,44 @@
+[
+  {
+    "Id": 1,
+    "title": "Precision Machining",
+    "description": "CNC machining services with tolerances up to ±0.0001\" for aerospace, medical, and automotive components.",
+    "icon": "Settings",
+    "category": "Machining"
+  },
+  {
+    "Id": 2,
+    "title": "Metal Fabrication",
+    "description": "Custom metal fabrication including welding, cutting, and forming for structural and architectural projects.",
+    "icon": "Wrench",
+    "category": "Fabrication"
+  },
+  {
+    "Id": 3,
+    "title": "Prototype Development",
+    "description": "Rapid prototyping services from concept to functional prototype with iterative design refinement.",
+    "icon": "Zap",
+    "category": "Prototyping"
+  },
+  {
+    "Id": 4,
+    "title": "Quality Control",
+    "description": "Advanced inspection and testing services including CMM, surface finish analysis, and material certification.",
+    "icon": "Shield",
+    "category": "Quality"
+  },
+  {
+    "Id": 5,
+    "title": "Production Tooling",
+    "description": "Custom tooling design and manufacturing for high-volume production runs and specialized applications.",
+    "icon": "Tool",
+    "category": "Tooling"
+  },
+  {
+    "Id": 6,
+    "title": "Assembly Services",
+    "description": "Complete assembly and sub-assembly services with testing, packaging, and logistics coordination.",
+    "icon": "Package",
+    "category": "Assembly"
+  }
+]

@@ -1,0 +1,83 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Toast customization */
+.Toastify__toast-container {
+  @apply text-sm font-body;
+}
+
+.Toastify__toast {
+  @apply rounded-lg shadow-lg;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(245, 247, 250, 0.95));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(74, 111, 165, 0.1);
+}
+
+.Toastify__toast--success {
+  @apply border-l-4 border-l-green-500;
+}
+
+.Toastify__toast--error {
+  @apply border-l-4 border-l-red-500;
+}
+
+.Toastify__toast--info {
+  @apply border-l-4 border-l-blue-500;
+}
+
+.Toastify__progress-bar {
+  background: linear-gradient(90deg, #4a6fa5, #ff6b35);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for modern browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-500;
+}
+
+/* Focus visible styles */
+.focus-visible {
+  @apply outline-none ring-2 ring-accent-500 ring-offset-2;
+}
+
+/* Custom animations */
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Backdrop blur support */
+.backdrop-blur-fallback {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+@supports (backdrop-filter: blur(10px)) {
+  .backdrop-blur-fallback {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+  }
+}

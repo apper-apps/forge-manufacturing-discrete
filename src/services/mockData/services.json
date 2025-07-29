@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "name": "Design Engineering",
+    "description": "Collaborative design and engineering support from concept through production readiness.",
+    "features": ["3D CAD Design", "FEA Analysis", "DFM Optimization", "Technical Documentation"]
+  },
+  {
+    "Id": 2,
+    "name": "Material Selection",
+    "description": "Expert guidance on material selection for optimal performance and cost-effectiveness.",
+    "features": ["Material Testing", "Cost Analysis", "Performance Validation", "Supply Chain Management"]
+  },
+  {
+    "Id": 3,
+    "name": "Process Development",
+    "description": "Custom manufacturing process development and optimization for your specific requirements.",
+    "features": ["Process Design", "Tooling Development", "Quality Planning", "Production Scale-up"]
+  },
+  {
+    "Id": 4,
+    "name": "Project Management",
+    "description": "End-to-end project management ensuring on-time delivery and quality standards.",
+    "features": ["Timeline Management", "Quality Assurance", "Progress Reporting", "Risk Mitigation"]
+  }
+]
