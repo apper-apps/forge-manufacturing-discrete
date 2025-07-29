@@ -10,7 +10,13 @@ const ProductsSection = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
+  const categories = ["All", "Custom Parts", "Assemblies", "Prototypes"];
+  
+  const filteredProducts = selectedCategory === "All" 
+    ? products 
+    : products.filter(product => product.category === selectedCategory);
   const loadProducts = async () => {
     try {
       setLoading(true);
@@ -82,21 +88,46 @@ const ProductsSection = () => {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body leading-relaxed">
-            Comprehensive manufacturing solutions backed by decades of expertise and 
+Comprehensive manufacturing solutions backed by decades of expertise and 
             state-of-the-art technology to bring your vision to life.
           </p>
         </motion.div>
 
+        {/* Category Filter Buttons */}
+        <motion.div 
+          className="flex flex-wrap justify-center gap-4 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                selectedCategory === category
+                  ? 'bg-gradient-to-r from-accent-500 to-accent-600 text-white shadow-lg transform scale-105'
+                  : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-accent-300 hover:text-accent-600 hover:shadow-md'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </motion.div>
+
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, index) => (
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          layout
+        >
+          {filteredProducts.map((product, index) => (
             <ProductCard
               key={product.Id}
               product={product}
               index={index}
             />
           ))}
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
         <motion.div
