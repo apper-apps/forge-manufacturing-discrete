@@ -3,6 +3,7 @@ import { ToastContainer } from "react-toastify";
 import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
 import HomePage from "@/components/pages/HomePage";
+import QuoteRequestPage from "@/components/pages/QuoteRequestPage";
 import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
@@ -10,8 +11,9 @@ function App() {
       <div className="min-h-screen bg-white">
         <Header />
         
-        <Routes>
+<Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/quote-request" element={<QuoteRequestPage />} />
         </Routes>
         
         <Footer />

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "@/components/atoms/Logo";
 import NavLink from "@/components/molecules/NavLink";
@@ -7,6 +8,7 @@ import ApperIcon from "@/components/ApperIcon";
 import useScrollSpy from "@/hooks/useScrollSpy";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
@@ -30,6 +32,11 @@ const navigationItems = [
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+const navigateToQuote = () => {
+    navigate('/quote-request');
+    setIsMobileMenuOpen(false);
+  };
 
   const scrollToContact = () => {
     const contactElement = document.getElementById("contact");
@@ -62,7 +69,7 @@ const navigationItems = [
             <Logo size="md" />
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-2">
+<nav className="hidden lg:flex items-center space-x-2">
               {navigationItems.map((item) => (
                 <NavLink
                   key={item.href}
@@ -72,11 +79,17 @@ const navigationItems = [
                   {item.label}
                 </NavLink>
               ))}
+              <NavLink
+                href="/quote-request"
+                isActive={location.pathname === "/quote-request"}
+              >
+                Quote Request
+              </NavLink>
             </nav>
 
             {/* Desktop CTA */}
-            <div className="hidden lg:block">
-              <Button onClick={scrollToContact} size="md">
+<div className="hidden lg:block">
+              <Button onClick={navigateToQuote} size="md">
                 Get Quote
               </Button>
             </div>
@@ -124,7 +137,7 @@ const navigationItems = [
                   </button>
                 </div>
 
-                <nav className="space-y-2">
+<nav className="space-y-2">
                   {navigationItems.map((item) => (
                     <NavLink
                       key={item.href}
@@ -136,10 +149,18 @@ const navigationItems = [
                       {item.label}
                     </NavLink>
                   ))}
+                  <NavLink
+                    href="/quote-request"
+                    isActive={location.pathname === "/quote-request"}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block w-full text-left px-4 py-3 rounded-lg"
+                  >
+                    Quote Request
+                  </NavLink>
                 </nav>
 
                 <div className="mt-8">
-                  <Button onClick={scrollToContact} size="lg" className="w-full">
+<Button onClick={navigateToQuote} size="lg" className="w-full">
                     Get Quote
                   </Button>
                 </div>
