@@ -3,7 +3,7 @@ import { ToastContainer } from "react-toastify";
 import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
 import HomePage from "@/components/pages/HomePage";
-
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <BrowserRouter>

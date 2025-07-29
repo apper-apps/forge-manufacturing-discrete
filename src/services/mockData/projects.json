@@ -1,0 +1,218 @@
+[
+  {
+    "Id": 1,
+    "title": "Precision Aerospace Components",
+    "industry": "aerospace",
+    "manufacturingProcess": "cnc-machining",
+    "description": "Custom titanium components for next-generation aircraft engines with sub-micron precision requirements.",
+    "beforeImage": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
+    "afterImage": "https://images.unsplash.com/photo-1562408590-e32931084e23?w=400&h=300&fit=crop",
+    "projectImages": [
+      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1562408590-e32931084e23?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1565043666747-69f6646db2d2?w=600&h=400&fit=crop"
+    ],
+    "challenges": [
+      "Achieving sub-micron precision on complex geometries",
+      "Working with titanium alloy material properties",
+      "Meeting aerospace certification standards"
+    ],
+    "approach": "Implemented 5-axis CNC machining with real-time monitoring, custom tooling design, and multi-stage quality validation process.",
+    "timeline": "8 weeks",
+    "duration": 56,
+    "partsProduced": 250,
+    "clientSatisfactionScore": 9.8,
+    "results": [
+      "100% first-pass quality rate",
+      "30% reduction in production time",
+      "Exceeded precision requirements by 40%"
+    ],
+    "testimonial": {
+      "quote": "ForgePro delivered exceptional quality components that exceeded our stringent aerospace standards. Their attention to detail and precision is unmatched.",
+      "author": "Sarah Chen",
+      "position": "Chief Engineer",
+      "company": "AeroTech Industries",
+      "companyLogo": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop"
+    }
+  },
+  {
+    "Id": 2,
+    "title": "Medical Device Prototyping",
+    "industry": "medical",
+    "manufacturingProcess": "3d-printing",
+    "description": "Biocompatible surgical instruments and implant prototypes for clinical trials.",
+    "beforeImage": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop",
+    "afterImage": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
+    "projectImages": [
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1582719471137-c3967ffb1c42?w=600&h=400&fit=crop"
+    ],
+    "challenges": [
+      "Meeting FDA biocompatibility requirements",
+      "Complex internal geometries",
+      "Rapid prototyping timeline demands"
+    ],
+    "approach": "Utilized medical-grade titanium 3D printing with post-processing treatments, biocompatibility testing, and iterative design optimization.",
+    "timeline": "4 weeks",
+    "duration": 28,
+    "partsProduced": 50,
+    "clientSatisfactionScore": 9.6,
+    "results": [
+      "FDA pre-submission approval",
+      "50% faster time-to-market",
+      "Zero defects in clinical trials"
+    ],
+    "testimonial": {
+      "quote": "The quality and speed of ForgePro's medical prototyping enabled us to accelerate our clinical timeline significantly.",
+      "author": "Dr. Michael Rodriguez",
+      "position": "R&D Director",
+      "company": "MedTech Solutions",
+      "companyLogo": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=120&h=60&fit=crop"
+    }
+  },
+  {
+    "Id": 3,
+    "title": "Automotive Engine Block Casting",
+    "industry": "automotive",
+    "manufacturingProcess": "casting",
+    "description": "High-performance aluminum engine blocks for electric vehicle applications.",
+    "beforeImage": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=400&h=300&fit=crop",
+    "afterImage": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop",
+    "projectImages": [
+      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&h=400&fit=crop"
+    ],
+    "challenges": [
+      "Lightweight design requirements",
+      "Complex cooling channel integration",
+      "High-volume production scaling"
+    ],
+    "approach": "Advanced sand casting with integrated cooling channels, automated finishing processes, and comprehensive quality control systems.",
+    "timeline": "12 weeks",
+    "duration": 84,
+    "partsProduced": 1000,
+    "clientSatisfactionScore": 9.4,
+    "results": [
+      "25% weight reduction achieved",
+      "Improved thermal efficiency by 15%",
+      "On-time delivery for production launch"
+    ],
+    "testimonial": {
+      "quote": "ForgePro's innovative approach to engine block casting helped us achieve our performance targets while meeting aggressive timelines.",
+      "author": "James Thompson",
+      "position": "Manufacturing Director",
+      "company": "ElectricAuto Corp",
+      "companyLogo": "https://images.unsplash.com/photo-1611174743420-3d7df880ce32?w=120&h=60&fit=crop"
+    }
+  },
+  {
+    "Id": 4,
+    "title": "Industrial Automation Components",
+    "industry": "industrial",
+    "manufacturingProcess": "sheet-metal",
+    "description": "Custom enclosures and brackets for robotic assembly line systems.",
+    "beforeImage": "https://images.unsplash.com/photo-1565043666747-69f6646db2d2?w=400&h=300&fit=crop",
+    "afterImage": "https://images.unsplash.com/photo-1581092582808-68ac85c3a0e7?w=400&h=300&fit=crop",
+    "projectImages": [
+      "https://images.unsplash.com/photo-1565043666747-69f6646db2d2?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1581092582808-68ac85c3a0e7?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
+    ],
+    "challenges": [
+      "Precise dimensional tolerances",
+      "Corrosion resistance requirements",
+      "Modular design constraints"
+    ],
+    "approach": "Precision sheet metal fabrication with laser cutting, robotic welding, and powder coating finish systems.",
+    "timeline": "6 weeks",
+    "duration": 42,
+    "partsProduced": 500,
+    "clientSatisfactionScore": 9.7,
+    "results": [
+      "100% dimensional accuracy",
+      "Reduced assembly time by 40%",
+      "Enhanced system reliability"
+    ],
+    "testimonial": {
+      "quote": "The precision and quality of ForgePro's sheet metal work is exceptional. Their components integrate perfectly with our automation systems.",
+      "author": "Lisa Park",
+      "position": "Lead Engineer",
+      "company": "RoboTech Manufacturing",
+      "companyLogo": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=120&h=60&fit=crop"
+    }
+  },
+  {
+    "Id": 5,
+    "title": "Marine Propeller System",
+    "industry": "marine",
+    "manufacturingProcess": "forging",
+    "description": "Heavy-duty propeller assemblies for commercial shipping vessels.",
+    "beforeImage": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop",
+    "afterImage": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+    "projectImages": [
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=600&h=400&fit=crop"
+    ],
+    "challenges": [
+      "Saltwater corrosion resistance",
+      "High-stress load requirements",
+      "Complex blade geometry"
+    ],
+    "approach": "Hot forging with specialized marine-grade alloys, precision machining, and comprehensive stress testing protocols.",
+    "timeline": "10 weeks",
+    "duration": 70,
+    "partsProduced": 25,
+    "clientSatisfactionScore": 9.9,
+    "results": [
+      "Exceeded load capacity by 20%",
+      "Superior corrosion resistance",
+      "Reduced fuel consumption by 8%"
+    ],
+    "testimonial": {
+      "quote": "ForgePro's marine propellers have significantly improved our fleet's performance and reliability. Outstanding engineering and manufacturing.",
+      "author": "Captain Robert Hayes",
+      "position": "Fleet Operations Manager",
+      "company": "Maritime Logistics Inc",
+      "companyLogo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=60&fit=crop"
+    }
+  },
+  {
+    "Id": 6,
+    "title": "Defense Equipment Components",
+    "industry": "defense",
+    "manufacturingProcess": "cnc-machining",
+    "description": "Tactical equipment housings and mounting systems for military applications.",
+    "beforeImage": "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?w=400&h=300&fit=crop",
+    "afterImage": "https://images.unsplash.com/photo-1565043666747-69f6646db2d2?w=400&h=300&fit=crop",
+    "projectImages": [
+      "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1565043666747-69f6646db2d2?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1562408590-e32931084e23?w=600&h=400&fit=crop"
+    ],
+    "challenges": [
+      "Military specification compliance",
+      "Extreme environment durability",
+      "Security clearance requirements"
+    ],
+    "approach": "Mil-spec certified manufacturing processes with enhanced security protocols, rigorous testing, and complete traceability systems.",
+    "timeline": "14 weeks",
+    "duration": 98,
+    "partsProduced": 200,
+    "clientSatisfactionScore": 10.0,
+    "results": [
+      "100% mil-spec compliance",
+      "Passed all environmental tests",
+      "Delivered ahead of schedule"
+    ],
+    "testimonial": {
+      "quote": "ForgePro's commitment to quality and security standards makes them our preferred partner for critical defense manufacturing projects.",
+      "author": "Colonel David Mitchell",
+      "position": "Program Director",
+      "company": "Defense Systems Corp",
+      "companyLogo": "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=120&h=60&fit=crop"
+    }
+  }
+]

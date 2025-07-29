@@ -10,16 +10,17 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-  const sectionIds = ["home", "products", "services", "about", "contact"];
-  const activeSection = useScrollSpy(sectionIds);
+const sectionIds = ["home", "products", "services", "projects", "about", "contact"];
+const activeSection = useScrollSpy(sectionIds);
 
-  const navigationItems = [
-    { href: "#home", label: "Home" },
-    { href: "#products", label: "Products" },
-    { href: "#services", label: "Services" },
-    { href: "#about", label: "About" },
-    { href: "#contact", label: "Contact" }
-  ];
+const navigationItems = [
+{ href: "#home", label: "Home" },
+{ href: "#products", label: "Products" },
+{ href: "#services", label: "Services" },
+{ href: "#projects", label: "Projects" },
+{ href: "#about", label: "About" },
+{ href: "#contact", label: "Contact" }
+];
 
   useEffect(() => {
     const handleScroll = () => {
