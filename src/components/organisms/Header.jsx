@@ -53,12 +53,8 @@ const navigateToQuote = () => {
 
   return (
     <>
-      <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? "bg-white/95 backdrop-blur-md shadow-lg" 
-            : "bg-transparent"
-        }`}
+<motion.header
+        className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
@@ -66,7 +62,7 @@ const navigateToQuote = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-<Logo size="md" className={isScrolled ? "text-gray-900" : "text-white"} />
+<Logo size="md" className="text-gray-900" />
 
             {/* Desktop Navigation */}
 <nav className="hidden lg:flex items-center space-x-2">
@@ -75,7 +71,7 @@ const navigateToQuote = () => {
                   key={item.href}
                   href={item.href}
                   isActive={activeSection === item.href.replace("#", "")}
-                  className={isScrolled ? "text-gray-700 hover:text-primary-600" : "text-white hover:text-gray-200"}
+className="text-gray-700 hover:text-primary-600"
                 >
                   {item.label}
                 </NavLink>
@@ -107,7 +103,7 @@ const navigateToQuote = () => {
             >
               <ApperIcon 
 name={isMobileMenuOpen ? "X" : "Menu"} 
-                className={`w-6 h-6 ${isScrolled ? "text-gray-700" : "text-white"}`}
+className="w-6 h-6 text-gray-700"
               />
             </button>
           </div>
