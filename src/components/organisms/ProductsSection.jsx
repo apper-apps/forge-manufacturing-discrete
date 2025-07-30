@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import ProductModal from "@/components/molecules/ProductModal";
 import { getAll } from "@/services/api/projectService";
 import { productService } from "@/services/api/productService";
 import ProductCard from "@/components/molecules/ProductCard";
+import ProductModal from "@/components/molecules/ProductModal";
 import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
 import Empty from "@/components/ui/Empty";
@@ -26,13 +26,12 @@ const ProductsSection = () => {
       setError("");
       const data = await productService.getAll();
       setProducts(data);
-    } catch (err) {
+} catch (err) {
       setError(err.message || "Failed to load products");
     } finally {
       setLoading(false);
-}
+    }
   };
-
   const handleProductClick = (product) => {
     setSelectedProduct(product);
     setIsModalOpen(true);
@@ -176,18 +175,17 @@ Comprehensive manufacturing solutions backed by decades of expertise and
             >
               Get Custom Quote
             </motion.button>
-          </div>
-</motion.div>
+</div>
+        </motion.div>
       </div>
-    </section>
 
-    {/* Product Detail Modal */}
-    <ProductModal
-      product={selectedProduct}
-      isOpen={isModalOpen}
-      onClose={handleCloseModal}
-    />
-    </>
+      {/* Product Detail Modal */}
+      <ProductModal
+        product={selectedProduct}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
+    </section>
   );
 };
 
