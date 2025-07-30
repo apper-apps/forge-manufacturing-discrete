@@ -66,22 +66,24 @@ const navigateToQuote = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Logo size="md" />
+<Logo size="md" className={isScrolled ? "text-gray-900" : "text-white"} />
 
             {/* Desktop Navigation */}
 <nav className="hidden lg:flex items-center space-x-2">
               {navigationItems.map((item) => (
-                <NavLink
+<NavLink
                   key={item.href}
                   href={item.href}
                   isActive={activeSection === item.href.replace("#", "")}
+                  className={isScrolled ? "text-gray-700 hover:text-primary-600" : "text-white hover:text-gray-200"}
                 >
                   {item.label}
                 </NavLink>
               ))}
-              <NavLink
+<NavLink
                 href="/quote-request"
                 isActive={location.pathname === "/quote-request"}
+                className={isScrolled ? "text-gray-700 hover:text-primary-600" : "text-white hover:text-gray-200"}
               >
                 Quote Request
               </NavLink>
@@ -89,7 +91,11 @@ const navigateToQuote = () => {
 
             {/* Desktop CTA */}
 <div className="hidden lg:block">
-              <Button onClick={navigateToQuote} size="md">
+<Button 
+                onClick={navigateToQuote} 
+                size="md"
+                className={`${isScrolled ? "bg-primary-600 hover:bg-primary-700 text-white" : "bg-white text-primary-600 hover:bg-gray-100"} transition-colors duration-300`}
+              >
                 Get Quote
               </Button>
             </div>
@@ -100,8 +106,8 @@ const navigateToQuote = () => {
               className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
             >
               <ApperIcon 
-                name={isMobileMenuOpen ? "X" : "Menu"} 
-                className="w-6 h-6 text-gray-700"
+name={isMobileMenuOpen ? "X" : "Menu"} 
+                className={`w-6 h-6 ${isScrolled ? "text-gray-700" : "text-white"}`}
               />
             </button>
           </div>
@@ -139,28 +145,32 @@ const navigateToQuote = () => {
 
 <nav className="space-y-2">
                   {navigationItems.map((item) => (
-                    <NavLink
+<NavLink
                       key={item.href}
                       href={item.href}
                       isActive={activeSection === item.href.replace("#", "")}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="block w-full text-left px-4 py-3 rounded-lg"
+                      className="block w-full text-left px-4 py-3 rounded-lg text-gray-700 hover:text-primary-600 hover:bg-gray-50"
                     >
                       {item.label}
                     </NavLink>
                   ))}
                   <NavLink
-                    href="/quote-request"
+href="/quote-request"
                     isActive={location.pathname === "/quote-request"}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block w-full text-left px-4 py-3 rounded-lg"
+                    className="block w-full text-left px-4 py-3 rounded-lg text-gray-700 hover:text-primary-600 hover:bg-gray-50"
                   >
                     Quote Request
                   </NavLink>
                 </nav>
 
                 <div className="mt-8">
-<Button onClick={navigateToQuote} size="lg" className="w-full">
+<Button 
+                    onClick={navigateToQuote} 
+                    size="lg" 
+                    className="w-full bg-primary-600 hover:bg-primary-700 text-white"
+                  >
                     Get Quote
                   </Button>
                 </div>
