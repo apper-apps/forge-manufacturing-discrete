@@ -1,10 +1,16 @@
 import { motion } from "framer-motion";
 import ApperIcon from "@/components/ApperIcon";
 
-const ProductCard = ({ product, index = 0 }) => {
+const ProductCard = ({ product, index = 0, onProductClick }) => {
+  const handleClick = () => {
+    if (onProductClick) {
+      onProductClick(product);
+    }
+  };
+
   return (
     <motion.div
-      className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 h-full overflow-hidden"
+      className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 h-full overflow-hidden cursor-pointer"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -13,6 +19,7 @@ const ProductCard = ({ product, index = 0 }) => {
         y: -5
       }}
       layout
+      onClick={handleClick}
     >
       <div className="flex flex-col h-full">
         {/* Product Image */}

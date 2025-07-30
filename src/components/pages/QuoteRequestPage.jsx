@@ -1,18 +1,20 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
-import Button from "@/components/atoms/Button";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { create } from "@/services/api/projectService";
+import { quoteService } from "@/services/api/quoteService";
+import ApperIcon from "@/components/ApperIcon";
+import FileUpload from "@/components/molecules/FileUpload";
+import FormStep from "@/components/molecules/FormStep";
+import StepIndicator from "@/components/molecules/StepIndicator";
 import Input from "@/components/atoms/Input";
 import TextArea from "@/components/atoms/TextArea";
-import StepIndicator from "@/components/molecules/StepIndicator";
-import FormStep from "@/components/molecules/FormStep";
-import FileUpload from "@/components/molecules/FileUpload";
-import ApperIcon from "@/components/ApperIcon";
-import { quoteService } from "@/services/api/quoteService";
+import Button from "@/components/atoms/Button";
 
 const QuoteRequestPage = () => {
   const navigate = useNavigate();
+const [searchParams] = useSearchParams();
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -37,11 +39,32 @@ const QuoteRequestPage = () => {
     email: "",
     phone: "",
     company: "",
-    address: "",
+address: "",
     additionalNotes: ""
   });
   
   const [errors, setErrors] = useState({});
+  
+  // Pre-populate form with product data from URL parameters
+  useEffect(() => {
+    const productName = searchParams.get('productName');
+    const category = searchParams.get('category');
+    const materials = searchParams.get('materials');
+    const specifications = searchParams.get('specifications');
+    
+    if (productName || category || materials || specifications) {
+      setFormData(prev => ({
+        ...prev,
+        projectType: category?.toLowerCase().includes('machining') ? 'machining' :
+                    category?.toLowerCase().includes('fabrication') ? 'fabrication' :
+                    category?.toLowerCase().includes('welding') ? 'welding' :
+                    category?.toLowerCase().includes('assembly') ? 'assembly' :
+                    category?.toLowerCase().includes('prototype') ? 'prototype' : prev.projectType,
+        materials: materials || prev.materials,
+        description: productName ? `Quote request for ${productName}${specifications ? `\n\nKey specifications: ${specifications}` : ''}${prev.description ? `\n\n${prev.description}` : ''}` : prev.description
+      }));
+}
+  }, [searchParams]);
 
   const steps = [
     { number: 1, title: "Project Details", description: "Tell us about your project" },

@@ -1,17 +1,20 @@
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import ProductModal from "@/components/molecules/ProductModal";
+import { getAll } from "@/services/api/projectService";
+import { productService } from "@/services/api/productService";
 import ProductCard from "@/components/molecules/ProductCard";
 import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
 import Empty from "@/components/ui/Empty";
-import { productService } from "@/services/api/productService";
 
 const ProductsSection = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
-
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const categories = ["All", "Custom Parts", "Assemblies", "Prototypes"];
   
   const filteredProducts = selectedCategory === "All" 
@@ -27,7 +30,17 @@ const ProductsSection = () => {
       setError(err.message || "Failed to load products");
     } finally {
       setLoading(false);
-    }
+}
+  };
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
   };
 
   useEffect(() => {
@@ -120,11 +133,12 @@ Comprehensive manufacturing solutions backed by decades of expertise and
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           layout
         >
-          {filteredProducts.map((product, index) => (
+{filteredProducts.map((product, index) => (
             <ProductCard
               key={product.Id}
               product={product}
               index={index}
+              onProductClick={handleProductClick}
             />
           ))}
         </motion.div>
@@ -163,9 +177,17 @@ Comprehensive manufacturing solutions backed by decades of expertise and
               Get Custom Quote
             </motion.button>
           </div>
-        </motion.div>
+</motion.div>
       </div>
     </section>
+
+    {/* Product Detail Modal */}
+    <ProductModal
+      product={selectedProduct}
+      isOpen={isModalOpen}
+      onClose={handleCloseModal}
+    />
+    </>
   );
 };
 
